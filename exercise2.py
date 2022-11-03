@@ -14,6 +14,9 @@ class Point2D:
     def y(self) -> float:
         return self._coordinates[1]
 
+    def __isub__(self, vec):
+        return Point2D(self.x - vec[0], self.y - vec[1])
+
 
 def test_point_construction() -> None:
     point = Point2D(1.0, 42.0)
