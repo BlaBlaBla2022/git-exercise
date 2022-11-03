@@ -16,6 +16,9 @@ class Point2D:
 
     def __isub__(self, vec):
         return Point2D(self.x - vec[0], self.y - vec[1])
+        
+    def __iadd__(self, other: Vector) -> Point2D:
+        return Point2D(self.x + other[0], self.y + other[1])
 
 
 def test_point_construction() -> None:
